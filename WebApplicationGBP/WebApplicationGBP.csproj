@@ -1,0 +1,555 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C686FDB4-6D9E-41CF-9B8B-8CDAA545B07A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplicationGBP</RootNamespace>
+    <AssemblyName>WebApplicationGBP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44387</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="registration\cooReg.aspx" />
+    <Content Include="registration\eeReg.aspx" />
+    <Content Include="registration\lecturerReg.aspx" />
+    <Content Include="registration\login\Lecturer\Grading.aspx" />
+    <Content Include="registration\login\Lecturer\LecCreatePR.aspx" />
+    <Content Include="registration\login\Lecturer\LecGradeDefense.aspx" />
+    <Content Include="registration\login\Lecturer\LecGradePR.aspx" />
+    <Content Include="registration\login\Lecturer\LecGradeThesis.aspx" />
+    <Content Include="registration\login\Lecturer\LecStyle.css" />
+    <Content Include="registration\login\Lecturer\LecturerAddToDo.aspx" />
+    <Content Include="registration\login\Lecturer\LecturerCreateLocalProject.aspx" />
+    <Content Include="registration\login\Lecturer\LecturerCreateMeeting.aspx" />
+    <Content Include="registration\login\Lecturer\LecturerMain.aspx" />
+    <Content Include="registration\login\Lecturer\LecturerMain2.aspx" />
+    <Content Include="registration\login\Lecturer\loginPage.css" />
+    <Content Include="registration\login\Lecturer\main.css" />
+    <Content Include="registration\login\Lecturer\Meeting.aspx" />
+    <Content Include="registration\login\Lecturer\Recomendations.aspx" />
+    <Content Include="registration\login\Lecturer\RecomendEE.aspx" />
+    <Content Include="registration\login\Lecturer\SpecifyThesisDeadline.aspx" />
+    <Content Include="registration\login\Lecturer\Supervise.aspx" />
+    <Content Include="registration\login\Lecturer\ViewEE.aspx" />
+    <Content Include="registration\login\Lecturer\ViewMeetingHelper.aspx" />
+    <Content Include="registration\login\Lecturer\ViewMeetings.aspx" />
+    <Content Include="registration\login\loginForm.aspx" />
+    <Content Include="registration\login\loginStyle.css" />
+    <Content Include="registration\login\student\addToDoList.aspx" />
+    <Content Include="registration\login\student\bookMeeting.aspx" />
+    <Content Include="registration\login\student\defense.aspx" />
+    <Content Include="registration\login\student\loginStyle.css" />
+    <Content Include="registration\login\student\main.css" />
+    <Content Include="registration\login\student\MakePreferences.aspx" />
+    <Content Include="registration\login\student\meetings.aspx" />
+    <Content Include="registration\login\student\pg.aspx" />
+    <Content Include="registration\login\student\regStyle.css" />
+    <Content Include="registration\login\student\studentMain.aspx" />
+    <Content Include="registration\login\student\studentStyle.css" />
+    <Content Include="registration\login\student\submitThesis.aspx" />
+    <Content Include="registration\login\student\thesis.aspx" />
+    <Content Include="registration\login\student\toViewBachelorGrade.aspx" />
+    <Content Include="registration\login\student\toViewBooked.aspx" />
+    <Content Include="registration\login\student\toViewDefense.aspx" />
+    <Content Include="registration\login\student\toViewNotBooked.aspx" />
+    <Content Include="registration\login\student\toViewPg.aspx" />
+    <Content Include="registration\login\student\toViewThesis.aspx" />
+    <Content Include="registration\login\student\updateDefense.aspx" />
+    <Content Include="registration\login\student\ViewBachelorGrade.aspx" />
+    <Content Include="registration\login\student\viewBookedMeetings.aspx" />
+    <Content Include="registration\login\student\viewDefense.aspx" />
+    <Content Include="registration\login\student\viewNotBookedMeetings.aspx" />
+    <Content Include="registration\login\student\viewPG.aspx" />
+    <Content Include="registration\login\student\viewPR.aspx" />
+    <Content Include="registration\login\student\viewThesis.aspx" />
+    <Content Include="registration\login\ViewBachelorProjects.aspx" />
+    <Content Include="registration\login\viewprojectHelper.aspx" />
+    <Content Include="registration\registrationPage.aspx" />
+    <Content Include="registration\regpass.aspx" />
+    <Content Include="registration\regStyle.css" />
+    <Content Include="registration\studentReg.aspx" />
+    <Content Include="registration\studentStyle.css" />
+    <Content Include="registration\taReg.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration\cooReg.aspx.cs">
+      <DependentUpon>cooReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\cooReg.aspx.designer.cs">
+      <DependentUpon>cooReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\eeReg.aspx.cs">
+      <DependentUpon>eeReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\eeReg.aspx.designer.cs">
+      <DependentUpon>eeReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\lecturerReg.aspx.cs">
+      <DependentUpon>lecturerReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\lecturerReg.aspx.designer.cs">
+      <DependentUpon>lecturerReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Grading.aspx.cs">
+      <DependentUpon>Grading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Grading.aspx.designer.cs">
+      <DependentUpon>Grading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecCreatePR.aspx.cs">
+      <DependentUpon>LecCreatePR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecCreatePR.aspx.designer.cs">
+      <DependentUpon>LecCreatePR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecGradeDefense.aspx.cs">
+      <DependentUpon>LecGradeDefense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecGradeDefense.aspx.designer.cs">
+      <DependentUpon>LecGradeDefense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecGradePR.aspx.cs">
+      <DependentUpon>LecGradePR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecGradePR.aspx.designer.cs">
+      <DependentUpon>LecGradePR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecGradeThesis.aspx.cs">
+      <DependentUpon>LecGradeThesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecGradeThesis.aspx.designer.cs">
+      <DependentUpon>LecGradeThesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerAddToDo.aspx.cs">
+      <DependentUpon>LecturerAddToDo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerAddToDo.aspx.designer.cs">
+      <DependentUpon>LecturerAddToDo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerCreateLocalProject.aspx.cs">
+      <DependentUpon>LecturerCreateLocalProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerCreateLocalProject.aspx.designer.cs">
+      <DependentUpon>LecturerCreateLocalProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerCreateMeeting.aspx.cs">
+      <DependentUpon>LecturerCreateMeeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerCreateMeeting.aspx.designer.cs">
+      <DependentUpon>LecturerCreateMeeting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerMain.aspx.cs">
+      <DependentUpon>LecturerMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerMain.aspx.designer.cs">
+      <DependentUpon>LecturerMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerMain2.aspx.cs">
+      <DependentUpon>LecturerMain2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\LecturerMain2.aspx.designer.cs">
+      <DependentUpon>LecturerMain2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Meeting.aspx.cs">
+      <DependentUpon>Meeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Meeting.aspx.designer.cs">
+      <DependentUpon>Meeting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Recomendations.aspx.cs">
+      <DependentUpon>Recomendations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Recomendations.aspx.designer.cs">
+      <DependentUpon>Recomendations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\RecomendEE.aspx.cs">
+      <DependentUpon>RecomendEE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\RecomendEE.aspx.designer.cs">
+      <DependentUpon>RecomendEE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\SpecifyThesisDeadline.aspx.cs">
+      <DependentUpon>SpecifyThesisDeadline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\SpecifyThesisDeadline.aspx.designer.cs">
+      <DependentUpon>SpecifyThesisDeadline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Supervise.aspx.cs">
+      <DependentUpon>Supervise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\Supervise.aspx.designer.cs">
+      <DependentUpon>Supervise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\ViewEE.aspx.cs">
+      <DependentUpon>ViewEE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\ViewEE.aspx.designer.cs">
+      <DependentUpon>ViewEE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\ViewMeetingHelper.aspx.cs">
+      <DependentUpon>ViewMeetingHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\ViewMeetingHelper.aspx.designer.cs">
+      <DependentUpon>ViewMeetingHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\ViewMeetings.aspx.cs">
+      <DependentUpon>ViewMeetings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\Lecturer\ViewMeetings.aspx.designer.cs">
+      <DependentUpon>ViewMeetings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\loginForm.aspx.cs">
+      <DependentUpon>loginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\loginForm.aspx.designer.cs">
+      <DependentUpon>loginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\addToDoList.aspx.cs">
+      <DependentUpon>addToDoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\addToDoList.aspx.designer.cs">
+      <DependentUpon>addToDoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\bookMeeting.aspx.cs">
+      <DependentUpon>bookMeeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\bookMeeting.aspx.designer.cs">
+      <DependentUpon>bookMeeting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\defense.aspx.cs">
+      <DependentUpon>defense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\defense.aspx.designer.cs">
+      <DependentUpon>defense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\MakePreferences.aspx.cs">
+      <DependentUpon>MakePreferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\MakePreferences.aspx.designer.cs">
+      <DependentUpon>MakePreferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\meetings.aspx.cs">
+      <DependentUpon>meetings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\meetings.aspx.designer.cs">
+      <DependentUpon>meetings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\pg.aspx.cs">
+      <DependentUpon>pg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\pg.aspx.designer.cs">
+      <DependentUpon>pg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\studentMain.aspx.cs">
+      <DependentUpon>studentMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\studentMain.aspx.designer.cs">
+      <DependentUpon>studentMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\submitThesis.aspx.cs">
+      <DependentUpon>submitThesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\submitThesis.aspx.designer.cs">
+      <DependentUpon>submitThesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\thesis.aspx.cs">
+      <DependentUpon>thesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\thesis.aspx.designer.cs">
+      <DependentUpon>thesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\toViewBachelorGrade.aspx.cs">
+      <DependentUpon>toViewBachelorGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\toViewBachelorGrade.aspx.designer.cs">
+      <DependentUpon>toViewBachelorGrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\toViewBooked.aspx.cs">
+      <DependentUpon>toViewBooked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\toViewBooked.aspx.designer.cs">
+      <DependentUpon>toViewBooked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\toViewDefense.aspx.cs">
+      <DependentUpon>toViewDefense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\toViewDefense.aspx.designer.cs">
+      <DependentUpon>toViewDefense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\toViewNotBooked.aspx.cs">
+      <DependentUpon>toViewNotBooked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\toViewNotBooked.aspx.designer.cs">
+      <DependentUpon>toViewNotBooked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\toViewPg.aspx.cs">
+      <DependentUpon>toViewPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\toViewPg.aspx.designer.cs">
+      <DependentUpon>toViewPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\toViewThesis.aspx.cs">
+      <DependentUpon>toViewThesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\toViewThesis.aspx.designer.cs">
+      <DependentUpon>toViewThesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\updateDefense.aspx.cs">
+      <DependentUpon>updateDefense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\updateDefense.aspx.designer.cs">
+      <DependentUpon>updateDefense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\ViewBachelorGrade.aspx.cs">
+      <DependentUpon>ViewBachelorGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\ViewBachelorGrade.aspx.designer.cs">
+      <DependentUpon>ViewBachelorGrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\viewBookedMeetings.aspx.cs">
+      <DependentUpon>viewBookedMeetings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\viewBookedMeetings.aspx.designer.cs">
+      <DependentUpon>viewBookedMeetings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\viewDefense.aspx.cs">
+      <DependentUpon>viewDefense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\viewDefense.aspx.designer.cs">
+      <DependentUpon>viewDefense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\viewNotBookedMeetings.aspx.cs">
+      <DependentUpon>viewNotBookedMeetings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\viewNotBookedMeetings.aspx.designer.cs">
+      <DependentUpon>viewNotBookedMeetings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\viewPG.aspx.cs">
+      <DependentUpon>viewPG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\viewPG.aspx.designer.cs">
+      <DependentUpon>viewPG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\viewPR.aspx.cs">
+      <DependentUpon>viewPR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\viewPR.aspx.designer.cs">
+      <DependentUpon>viewPR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\student\viewThesis.aspx.cs">
+      <DependentUpon>viewThesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\student\viewThesis.aspx.designer.cs">
+      <DependentUpon>viewThesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\ViewBachelorProjects.aspx.cs">
+      <DependentUpon>ViewBachelorProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\ViewBachelorProjects.aspx.designer.cs">
+      <DependentUpon>ViewBachelorProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\login\viewprojectHelper.aspx.cs">
+      <DependentUpon>viewprojectHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\login\viewprojectHelper.aspx.designer.cs">
+      <DependentUpon>viewprojectHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\registrationPage.aspx.cs">
+      <DependentUpon>registrationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\registrationPage.aspx.designer.cs">
+      <DependentUpon>registrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\regpass.aspx.cs">
+      <DependentUpon>regpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\regpass.aspx.designer.cs">
+      <DependentUpon>regpass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\studentReg.aspx.cs">
+      <DependentUpon>studentReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\studentReg.aspx.designer.cs">
+      <DependentUpon>studentReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration\taReg.aspx.cs">
+      <DependentUpon>taReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration\taReg.aspx.designer.cs">
+      <DependentUpon>taReg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="registration\.vs\registration\config\applicationhost.config" />
+    <Content Include="registration\.vs\registration\FileContentIndex\a380ab0a-1aba-45a7-bde7-3fee436b854a.vsidx" />
+    <Content Include="registration\.vs\registration\FileContentIndex\read.lock" />
+    <Content Include="registration\.vs\registration\v17\.wsuo" />
+    <Content Include="registration\.vs\slnx.sqlite" />
+    <Content Include="registration\.vs\VSWorkspaceState.json" />
+    <Content Include="registration\login\student\.vs\slnx.sqlite" />
+    <Content Include="registration\login\student\.vs\student\FileContentIndex\fbc7eb82-61bb-41ca-9820-f1ee67b15f04.vsidx" />
+    <Content Include="registration\login\student\.vs\student\FileContentIndex\read.lock" />
+    <Content Include="registration\login\student\.vs\student\v17\.wsuo" />
+    <Content Include="registration\login\student\.vs\VSWorkspaceState.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="registration\.vs\registration\FileContentIndex\merges\" />
+    <Folder Include="registration\login\student\.vs\student\FileContentIndex\merges\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56307</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

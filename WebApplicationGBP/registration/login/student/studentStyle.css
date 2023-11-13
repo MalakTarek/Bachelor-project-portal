@@ -1,0 +1,57 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    background-image: url("/giu.PNG");
+}
+
+form {
+    margin-top: 50px;
+}
+
+Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: red;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #c4161c;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+select {
+    font-size: 23px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 32px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 18px;
+}
+
+.datebox {
+    margin-left: 25px;
+    font-size: 22px;
+}
