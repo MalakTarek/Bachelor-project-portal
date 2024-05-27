@@ -51,6 +51,13 @@ The system includes detailed user stories for various user interactions:
 - **Employees**:
   - Grade thesis and defenses, create progress reports.
 
+## Technologies Used
+
+- **Frontend**: ASP.NET Framework with C#
+- **Backend**: SQL Server
+- **Database**: SQL Server
+- **Integration**: ASP.NET and SQL Server for a seamless user experience
+
 ## Contributors
 
 This project was developed as part of the Databases course at the German International University of Applied Sciences. Here are the key contributors to the project:
