@@ -2,17 +2,6 @@ GIU Bachelor Portal
 Overview
 
 The GIU Bachelor Portal is a comprehensive system designed to facilitate the management of bachelor projects at the German International University of Applied Sciences. This platform serves various types of users including students, lecturers, teaching assistants, companies, external examiners, coordinators, and external supervisors, streamlining the entire process from project creation to final grading.
-Table of Contents
-
-    Project Overview
-    System Requirements
-    User Stories
-    Installation
-    Usage
-    Database Schema
-    API Endpoints
-    Contributing
-    License
 
 Project Overview
 
